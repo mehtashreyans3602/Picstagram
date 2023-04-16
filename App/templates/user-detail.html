@@ -1,0 +1,19 @@
+{% extends 'base1.html' %}
+{% load static %}
+
+{% block title1 %} user-detail  {% endblock title1 %}
+{% block css %}  {% endblock css %}
+
+
+{% block content %}
+    <div class="user-detail">
+        <img src="{{data.image.url}} " alt="">
+        <div class="follow-btn">
+            <p>  </p>
+            <form action="user-detail" method="post">{% csrf_token %}
+                <button class="btn profile-edit-btn" type="submit"> Follow </button>
+            </form>
+        </div>
+    </div>
+    
+{% endblock content %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Register {% endblock title %}
+
+{% block css %} <link rel="stylesheet" href="{% static 'css/register.css' %}"> {% endblock css %}
+
+{% block content %}
+    <div class="register">
+        <form action=" " method="post" class="register-form">{% csrf_token %}
+            <h1 id="signup">Bango</h1>
+            <input type="text" name="userName" placeholder="username" ><br>
+            <input type="text" name="firstName" placeholder="first name"><br>
+            <input type="text" name="lastName" placeholder="last name"><br>
+            <input type="email" name="email" placeholder="email"><br>
+            <input type="password" name="password1" placeholder="password"><br>
+            <input type="password" name="password2" placeholder="confirm password"><br>
+            <center><input type="submit" class="btn btn-primary " id="submit" ><br></center>
+        </form>
+    </div>
+
+    <div>
+        {% for message in messages %}
+            <h3> {{message}} </h3>
+        {% endfor %}
+    </div>
+{% endblock content %}

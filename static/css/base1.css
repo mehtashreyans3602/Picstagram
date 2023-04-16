@@ -1,0 +1,39 @@
+
+#navbar {
+    background-color: white;
+    height: auto;
+    border-bottom: 1px solid grey;
+}
+
+#search{
+    padding: 5px 25px 5px 25px;
+    border-radius: 10px;
+} 
+
+#nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0px 20px;
+    width: 70%;
+    align-items: center;
+    margin: auto;
+}
+
+a{
+    margin: 5px;
+   
+}
+
+img{
+    height: 25px;
+    width: 25px;
+}
+
+#logo {
+    width: 35%;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 50px;
+}
+
