@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title> {% block title1 %} {% endblock title1 %} / Picstagram</title>
+    <link rel="stylesheet" href=" {% static 'css/base1.css' %} " >
+    {% block css %} {% endblock css %}
+</head>
+<body>
+    <nav id="navbar">
+        <div id="nav">
+            <div id="logo">
+                <a href=" {% url 'home' %}  " style=" text-decoration: none;
+                color: black;">Picstagram</a>
+            </div>
+            <div>
+                <input type="search" placeholder="search" id="search">
+            </div>
+            <div class="menu">
+                <a class="a" href=" {% url 'home' %} "><img src=" {% static 'images/home.png' %} " alt=""></a>
+                <a class="a" href="#"><img src=" {% static 'images/chat.png' %} " alt=""></a>
+                <a class="a" href=" {% url 'post' %} "><img src=" {% static 'images/more.png' %} " alt=""></a>
+                <a class="a" href="#"><img src=" {% static 'images/explore.png' %} " alt=""></a>
+                <a class="a" href="#"><img src=" {% static 'images/love.png' %} " alt=""></a>
+                <a class="a" href=" {% url 'user_profile' %} "><img src=" {% static 'images/user.png' %} " alt=""></a>
+                <a href="{% url 'logout' %}">Logout</a>
+            </div>
+
+        </div>
+    </nav>
+
+    
+
+
+    {% block content %}
+        
+    {% endblock content %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+</html>
