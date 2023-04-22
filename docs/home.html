@@ -1,0 +1,19 @@
+{% extends 'base1.html' %}
+<link rel="stylesheet" href=" static/css/home.css">
+
+
+{% block content %}
+    <div id="post" style="width: 70%; margin: auto; margin-top:50px; ">
+
+        <div class="card" style="width: 18rem;">
+            <img src="{{data.image.url}}" class="card-img-top" alt="N/A">
+            <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p></p>
+            <a href=" {% url 'user-detail' %} " class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+
+    </div>
+    
+{% endblock content %}
